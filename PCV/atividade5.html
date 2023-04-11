@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <body>
+        <form name="myForm" action="/action_page.php" onsubmit=>
+            Capital<input type="text" name="fname">
+            Taxa de Juros<input type="text" name="fname2">
+            Meses<input type="text" name="fname3">
+            <input type="button" onclick="validateForm()" value="Submit form" class="btn">
+        </form>
+    </body>
+    
+   <script>
+    function validateForm() {
+    var capital = parseInt(document.forms["myForm"]["fname"].value);
+    var tXjuros = parseInt(document.forms["myForm"]["fname2"].value);
+    var meses = parseInt(document.forms["myForm"]["fname3"].value);
+
+    if (capital == "") {
+        alert("digite algo");
+        return false;
+    }else if (tXjuros == "") {
+        alert("digite algo");
+        return false;
+    }else if (meses == "") {
+        alert("digite algo");
+        return false;
+    }else {
+        var juros = parseFloat(capital * (tXjuros / 100) * meses);
+        var capitalTotal = capital + juros;
+        alert("Saldo em " + meses + " meses é de " + capitalTotal);
+    }
+}
+   </script> 
+</body>
+</html>

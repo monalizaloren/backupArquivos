@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="myForm" action="/action_page.php" onsubmit=>
+        tempo <input type="text" name="fname">
+        velocidade <input type="text" name="fname2">
+        consumo <input type="text" name="fname3">
+        valor combustivel <input type="text" name="fname4">
+        <input type="button" onclick="validateForm()" value="Submit form" class="btn">
+    </form>
+
+   <script>
+    function validateForm() {
+    var tempo = parseInt(document.forms["myForm"]["fname"].value);
+    var velocidade = parseInt(document.forms["myForm"]["fname2"].value);
+    var consumo = parseInt(document.forms["myForm"]["fname3"].value);
+    var valor = parseInt(document.forms["myForm"]["fname4"].value);
+
+    if (tempo == "") {
+        alert("digite algo");
+        return false;
+    }else if (velocidade == "") {
+        alert("digite algo");
+        return false;
+    }else if (consumo == "") {
+        alert("digite algo");
+        return false;
+    }else if (valor == "") {
+        alert("digite algo");
+        return false;
+    }else {
+        var distancia = parseFloat(tempo * velocidade);
+        var qtdCombustivel = parseFloat(distancia / consumo);
+        var valorTotal = parseFloat(qtdCombustivel * valor);
+         alert("A  distancia = " + distancia + "\n" + "Qtd. Combustivel = " + qtdCombustivel + "\n" + "O Valor total foi de = " + valorTotal);
+    }
+}
+   </script> 
+</body>
+</html>

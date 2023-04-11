@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="myForm" action="/action_page.php" onsubmit=>
+        <select name="fname" id="fname">
+            <optionvalue="13">13 - Dilma - PT</option>
+            <option value="43">43 - Eduardo Campos - PSB</option>
+            <option value="45">45 - Aecio Neves - PSDB</option>
+            <option value="50">50 - Fernando Gabeira - PV</option>
+            <option value="Nulo">Anular Votos</option>
+            <option value="cancelar">Cancelar</option>
+
+        </select>
+        <input type="button" onclick="validateForm()" value="Submit form" class="btn">
+    </form>
+    <script>
+function validateForm() {
+    var candidato = document.forms["myForm"]["fname"].value;
+
+    if (candidato == 'Nulo') {
+        alert("Voto computado com sucesso.");
+    }else if (candidato == 'cancelar') {
+        alert("Voto cancelado");
+    }else {
+        alert("Deseja confirmar seu voto?");
+        alert("Voto em " + candidato + " confirmado!");
+    }
+}
+
+
+    </script>
+</body>
+</body>
+</html>

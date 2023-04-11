@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="myForm" action="/action_page.php" onsubmit=>
+        <input type="button" onclick="validateForm()" value="Submit form" class="btn">
+    </form>
+    <script>
+
+function validateForm() {
+
+var contador = 0;
+var soma = 0;
+var numero = 0;
+numero = parseInt(prompt('Digite um numero'));
+while (numero != 0) {
+    soma += numero;
+    contador++;
+    numero = parseInt(prompt('Digite um numero'));
+}
+alert("Soma = " + soma + " Qtd. Numero = " + contador);
+}
+
+    </script>
+</body>
+</body>
+</html>

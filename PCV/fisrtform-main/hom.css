@@ -1,0 +1,41 @@
+body{
+    margin: 0;
+}
+
+img{
+    width: 30vw;
+    
+   
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+   
+
+}
+
+
+
+.first-cadastro{
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: blueviolet;
+    font: 800;
+
+}
+
+h3{
+    text-align: right;
+    color: blueviolet;
+}

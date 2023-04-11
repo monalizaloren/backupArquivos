@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Formulário de login</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<title>Formulário de login</title>
+		<style>
+			body {
+				background-color: #f2f2f2;
+				font-family: Arial, sans-serif;
+			}
+			h1 {
+				text-align: center;
+				margin-top: 50px;
+			}
+			form {
+				margin: 50px auto;
+				width: 300px;
+				padding: 20px;
+				background-color: #ffffff;
+				border: 1px solid #dddddd;
+				border-radius: 5px;
+			}
+			p {
+				display: block;
+				font-size: 16px;
+				font-weight: bold;
+				margin-bottom: 9px;
+			}
+			input[type="text"],
+			input[type="password"] {
+				padding: 10px;
+				font-size: 16px;
+				border-radius: 5px;
+				border: 1px solid #dddddd;
+				margin-bottom: 20px;
+				width: 90%;
+				
+			}
+			input[type="submit"] {
+				background-color: #03adf0;
+				color: #ffffff;
+				font-size: 16px;
+				padding: 10px;
+				border: none;
+				border-radius: 5px;
+				cursor: pointer;
+			}
+			input[type="submit"]:hover {
+				background-color: #3e8e41;
+			}
+			.profile-image {
+				display: block;
+				width: 50px;
+				margin: 0 auto 20px;
+				border-radius: 50%;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Formulário de login</h1>
+		<form>
+			<img src="user.png" alt="Imagem de perfil" class="profile-image">
+			<p >Usuário:</p>
+			<input type="text" id="username" ><br><br>
+
+			<p >Senha:</p>
+			<input type="password" id="password" ><br><br>
+
+			<input type="submit" value="Entrar">
+		</form>
+	</body>
+
+</html>

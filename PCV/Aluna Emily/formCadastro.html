@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="UTF-8">
+    <title>Formulário de Cadastro</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+      }
+      form {
+        width: 500px;
+        margin: 50px auto;
+        background-color: #ffffff;
+        border-radius: 5px;
+        padding: 20px;
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      p {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+      }
+      input[type="text"], input[type="email"], input[type="password"], select {
+        width: 90%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #dddddd;
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+      #idade{
+        width: 90%;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #dddddd;
+        margin-bottom: 20px;
+        font-size: 16px;
+      }
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: #ffffff;
+        font-size: 16px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+      .profile{
+        width: 50px;
+        display: block;
+        margin: 0 auto 20px;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <form>
+        <img src="user (1).png" class="profile">
+      <h1>Cadastro</h1>
+      <p >Nome:</p>
+      <input type="text" id="nome">
+
+      <p >Idade</p>
+      <input type="number" id="idade" >
+
+      <p >E-mail:</p>
+      <input type="email" id="email" >
+
+      <p >Senha:</p>
+      <input type="password" id="senha" >
+
+      
+
+
+      <button onclick="cadastrar()">Cadastrar</button>
+    </form>
+    <script>
+    
+    function cadastrar() {
+  var nome = document.getElementById("nome").value;
+  var idade = document.getElementById("idade").value;
+  var email = document.getElementById("email").value;
+  var senha = document.getElementById("senha").value;
+
+  // Verifica se o nome está preenchido
+  if (nome === "") {
+    alert("Por favor, preencha o campo Nome");
+    return;
+  }
+
+  // Verifica se a idade está preenchida e é um número válido
+  else if(idade === "" || idade < 1) {
+    alert("Por favor, preencha o campo Idade com um número válido");
+    return;
+  }
+
+  // Verifica se o e-mail está preenchido e tem formato válido
+  else if(email === "" ) {
+    alert("Por favor, preencha o campo E-mail com um endereço válido");
+    return;
+  }
+
+  // Verifica se a senha está preenchida e tem pelo menos 6 caracteres
+  else if (senha === "" || senha.length < 6) {
+    alert("Por favor, preencha o campo Senha com pelo menos 6 caracteres");
+    return;
+  }
+
+  console.log("Nome: " + nome);
+  console.log("Idade: " + idade);
+  console.log("E-mail: " + email);
+  console.log("Senha: " + senha);
+
+  alert("Cadastro realizado com sucesso!");
+}
+
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+if ( xxx ) {
+  
+ }

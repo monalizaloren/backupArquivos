@@ -1,0 +1,39 @@
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+}
+h1 {
+    text-align: center;
+    
+}
+.profile{
+    width: 50px;
+}
+form {
+    margin: 10px auto; /* Define as margens do elemento form. A margem superior e inferior são definidas como 10 pixels, enquanto a margem esquerda e direita são definidas automaticamente pelo navegador para centralizar o elemento horizontalmente.*/
+    width: 300px;
+    padding: 20px; /*Define o preenchimento interno do elemento form como 20 pixels.*/
+    background-color: #ffffff;
+    border: 1px solid #dddddd; /* Define uma borda para o elemento form com uma largura de 1 pixel, um estilo sólido e uma cor de cinza claro (#dddddd).*/
+    border-radius: 5px;
+}
+input[type="submit"] {
+    background-color: #03adf0;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 10px;/* Define o preenchimento interno*/
+    border: none;/* Sem borda */
+    border-radius: 5px;
+    cursor: pointer;
+}
+input[type="submit"]:hover {
+    background-color: #005eaa;
+  }
+
+input[type="text"],input[type="password"] {
+				padding: 10px;
+				font-size: 16px;
+				border-radius: 5px;
+				border: 1px solid #dddddd;
+				width: 90%;
+            }

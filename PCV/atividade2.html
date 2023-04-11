@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <body>
+        <form name="myForm" action="/action_page.php" onsubmit=>
+            <input type="text" name="fname">
+            <input type="text" name="fname2">
+            <input type="text" name="fname3">
+            <input type="button" onclick="validateForm()" value="Submit form" class="btn">
+        </form>
+
+
+   <script>
+    
+    function validateForm() {
+        var estaValido=true;
+    var x = document.forms["myForm"]["fname"].value;
+    var y = document.forms["myForm"]["fname2"].value;
+    var z = document.forms["myForm"]["fname3"].value;
+    if (x == "") {
+        alert("digite algo no primeiro campo");
+        estaValido=false;
+    }else if (y == "") {
+        alert("digite algo no segundo campo");
+        estaValido=false;
+    }else if (z == "") {
+        alert("digite algo no terceiro campo");
+        estaValido=false;
+    }else {
+        var media = parseFloat((x + y + z) / 3);
+        alert("A média é " + media);
+    }
+    return estaValido;
+}
+   </script> 
+</body>
+</html>

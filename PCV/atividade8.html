@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="myForm" action="/action_page.php" onsubmit=>
+        Digite o peso em Kg <input type="text" name="fname">
+        Digite a altura em cm <input type="text" name="fname3">
+        <input type="button" onclick="validateForm()" value="Submit form" class="btn">
+    </form>
+    <script>
+
+function validateForm() {
+    var peso = parseInt(document.forms["myForm"]["fname"].value);
+    var altura = parseInt(document.forms["myForm"]["fname2"].value);
+    var imc = peso / (altura * altura);
+
+    if (imc < 20) {
+        alert("ABAIXO DO PESO!");
+        return false;
+    }else if (imc <= 30 & imc>= 20) {
+        alert("PESO NORMAL!");
+        return false;
+    }else {
+        alert("ACIMA DO PESO!");
+    }
+}
+
+    </script>
+</body>
+</body>
+</html>

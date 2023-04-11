@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="myForm" action="/action_page.php" onsubmit=>
+        Digite um número<input type="text" name="fname">
+        Digite outro número<input type="text" name="fname2">
+        <input type="button" onclick="validateForm()" value="Submit form" class="btn">
+    </form>
+    <script>
+function validateForm() {
+    var x = parseInt(document.forms["myForm"]["fname"].value);
+    var y = parseInt(document.forms["myForm"]["fname2"].value);
+
+    if (x > y) {
+        alert("numero " + x + " é maior!");
+        return false;
+    }else if (y > x) {
+        alert("numero " + y + " é maior!");
+        return false;
+    }else {
+        alert("São iguais");
+    }
+}
+
+
+    </script>
+</body>
+</body>
+</html>
